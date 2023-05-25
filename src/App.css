@@ -1,0 +1,34 @@
+/* General */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar */
+
+nav {
+  border: 1px solid black;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style-type: none;
+  align-items: center;
+}
+
+li {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  font-size: 3rem;
+}
