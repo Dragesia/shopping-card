@@ -1,34 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Albert Sans');
+
 /* General */
 
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Alberta Sans','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 html, body {
   box-sizing: border-box;
   font-size: 10px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image: url('background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 /* Navbar */
 
-nav {
-  border: 1px solid black;
-}
-
-ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.top-nav {
+  padding: 5rem 15rem 5rem 15rem;
+  display: flex;
+  flex-direction: row;
   list-style-type: none;
   align-items: center;
+  justify-content: space-between;
 }
 
-li {
-  text-align: center;
+.nav-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 250px;
 }
 
-a {
+.top-nav a {
   text-decoration: none;
+  font-size: 2.1rem;
+  color: white;
+  font-weight: bolder;
+}
+
+/* Home */
+
+.home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: calc(100vh - 12.8rem);
+}
+
+.home-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  padding-right: 10rem;
+  padding-bottom: 8rem;
+}
+
+.home-right > h1 {
+  color: white;
+  font-size: 4rem;
+}
+
+.home-right > p {
+  color: white;
   font-size: 3rem;
+}
+
+.home-right > button {
+  font-size: 2rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.home-right > button:hover {
+  box-shadow: 3px 3px #444;
+}
+
+/* Products */
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+/* Items */
+
+.item {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.item > img {
+  height: 400px;
+  width: 300px;
+}
+
+.item > .name {
+  font-size: 3rem;
+}
+
+.item > .price {
+  font-size: 2rem;
+}
+
+/* Container */
+
+.content-container {
+  display: flex;
+  flex-direction: row;
 }

@@ -1,5 +1,13 @@
-export default function Products() {
+import Item from "./Item"
+
+export default function Products({ products }) {
     return (
-        <h1>Products</h1>
-    )
+        <>
+            <div className="products">
+            {products.map(product => {
+                return product.items.map(item => <Item poster={item} />);
+            })}
+            </div>
+        </>
+    )   
 }
