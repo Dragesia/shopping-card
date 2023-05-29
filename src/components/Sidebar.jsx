@@ -1,19 +1,20 @@
 import { Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-export default function Sidebar() {
+export default function Sidebar({ category, setCategory }) {
     return (
         <div className="content-container">
             <nav className="sidebar">
+                <div className="category">{category}</div>
                 <ul>
                     <li>
-                        <Link to='movies'>Movies</Link>
+                        <Link to='movies' onClick={() => setCategory('Movie Posters')}>Movies</Link>
                     </li>
                     <li>
-                        <Link to='series'>Series</Link>
+                        <Link to='series' onClick={() => setCategory('TV Series Posters')}>Series</Link>
                     </li>
                     <li>
-                        <Link to='games'>Games</Link>
+                        <Link to='games' onClick={() => setCategory('Game Posters')}>Games</Link>
                     </li>
                 </ul>
             </nav>
